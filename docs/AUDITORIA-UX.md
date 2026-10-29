@@ -27,5 +27,5 @@
 
 ## 4. Lighthouse (Accesibilidad)
 
-- Antes: 72
-- Después: puntaje
+- ![antes 72](lighthouse-antes.png)
+- ![Después: 100](lighthouse-despues.png)
