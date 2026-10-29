@@ -2,17 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>notas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis notas</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <h5>APLICACION DE GESTION DE NOTAS PERSONALES</h5>
-  <img src="img/banner.png">
-  <input id="nota" placeholder="Nota">
-  <button id="agregar">ok</button>
-  <h6>LISTADO</h6>
-  <div id="lista"></div>
-  <a href="#" id="borrar">BORRAR TODAS</a>
+  <main class="tarjeta">
+    <img src="img/banner.png" alt="Logo de la NBA">
+    <h1>Mis notas</h1>
+    <p class="ayuda">Escribe una nota, elige su categoría y agrégala.</p>
+
+    <form id="formulario">
+      <label for="nota">Escribe tu nota</label>
+      <input id="nota" type="text" autocomplete="off" aria-describedby="pista">
+      <p id="pista" class="pista">Escribe algo para poder agregar la nota.</p>
+
+      <label for="categoria">Categoría</label>
+      <select id="categoria">
+        <option>Personal</option>
+        <option>Estudio</option>
+        <option>Trabajo</option>
+      </select>
+
+      <button type="submit" id="agregar" class="boton-principal" disabled>Agregar nota</button>
+    </form>
+
+    <p id="mensaje" class="mensaje" role="status"></p>
+
+    <h2>Tus notas (<span id="contador">0</span>)</h2>
+    <div id="lista"></div>
+
+    <div class="zona-peligro">
+      <button type="button" id="borrar-todas" class="boton-secundario" disabled>Borrar todas las notas</button>
+    </div>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
